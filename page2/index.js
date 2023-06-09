@@ -317,7 +317,7 @@ function handleNextQuestion() {
     unCheckRadioButtons()
     //delays next question displaying for a second just for some effects so questions don't rush in on player
     setTimeout(() => {
-        if (indexNumber <= 9) {
+        if (indexNumber <= 18) {
 //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
             NextQuestion(indexNumber)
         }
