@@ -1,4 +1,12 @@
 /* The sidebar menu */
+button {
+position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  font-family: "Lato", sans-serif;
+}
+
 .sidebar {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
