@@ -1,133 +1,485 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>F1 TAKVIM</title>
+<link rel="icon" type="image/x-icon" href="../images/ardagaico.ico">
+
 <style>
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
+body{
+	text-align: center;
+	background: gray;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
-th, td {
-  text-align: left;
-  padding: 16px;
+h1{
+  color: red;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 25vh 0px 20px;
 }
 
-tr:nth-child(even) {
-  background-color: #f2f2f2;
+.clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+    // margin-bottom: 15px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.clockdiv > div{
+	padding: 15px;
+	border-radius: 3px;
+	background: #00BF96;
+    margin: 10px;
+    // width: 90px;
+}
+
+.clockdiv div > span{
+	padding: 15px;
+    font-size: 22px;
+	border-radius: 3px;
+	background: #00816A;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+
+.smalltext {
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 18px;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
 </style>
-
-
-<script src="avusturyagp.js"></script>
-<script src="britaingp.js"></script>
-<script src="hungarygp.js"></script>
-<script src="belgiumgp.js"></script>
-<script src="netherlands.js"></script>
-<script src="italygp.js"></script>
-<script src="singaporegp.js"></script>
-<script src="japanagp.js"></script>
-<script src="qatargp.js"></script>
-<script src="americagp.js"></script>
-<script src="mexicocitygp.js"></script>
-<script src="brazilgp.js"></script>
-<script src="lasvegasgp.js"></script>
-<script src="abudabigp.js"></script>
-  
 </head>
 <body>
+<h1>F1 Calendar</h1>
+<!-- 1 -->
+<div class="clockdiv" data-date="July 2, 2023 16:00:00">
+    <p>AVUSTURYA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 2 -->
+<div class="clockdiv" data-date="July 9, 2023 17:00:00">
+    <p>BRITANYA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 3 -->
+<div class="clockdiv" data-date="July 23, 2023 16:00:00">
+    <p>MACARISTAN</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 4 -->
+<div class="clockdiv" data-date="July 30, 2023 16:00:00">
+    <p>BELCIKA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 5 -->
+<div class="clockdiv" data-date="August 27, 2023 16:00:00">
+    <p>HOLLANDA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 6 -->
+<div class="clockdiv" data-date="September 3, 2023 16:00:00">
+    <p>ITALYA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 7 -->
+<div class="clockdiv" data-date="September 17, 2023 15:00:00">
+    <p>SINGAPUR</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 8 -->
+<div class="clockdiv" data-date="September 24, 2023 08:00:00">
+    <p>JAPONYA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 9 -->
+<div class="clockdiv" data-date="October 8, 2023 17:00:00">
+    <p>KATAR</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 10 -->
+<div class="clockdiv" data-date="October 22, 2023 22:00:00">
+    <p>AMERIKA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 11 -->
+<div class="clockdiv" data-date="October 29, 2023 23:00:00">
+    <p>MEXICA CITY</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 12 -->
+<div class="clockdiv" data-date="November 5, 2023 20:00:00">
+    <p>BREZILYA</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 13 -->
+<div class="clockdiv" data-date="November 19, 2023 09:00:00">
+    <p>LAS VEGAS</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
+<!-- 14 -->
+<div class="clockdiv" data-date="November 26, 2023 16:00:00">
+    <p>ABU DABI</p>
+    <div>
+        <span class="days"></span>
+        <div class="smalltext">days</div>
+    </div>
+    <div>
+        <span class="hours"></span>
+        <div class="smalltext">hours</div>
+    </div>
+    <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minutes</div>
+    </div>
+    <div>
+        <span class="seconds"></span>
+        <div class="smalltext">seconds</div>
+    </div>
+</div>
 
-<h2>F1 CALENDAR</h2>
 
+<script>
 
-  <!-- <script src="myScript.js"></script>   -->
-
-<table>
-  <tr>
-    <th>Grand Prix</th>
-    <th>Date</th>
-    <th>Countdown</th>
-  </tr>
-  <tr>
-    <td>AVUSTURYA GP</td>
-    <td>2 TEMMUZ</td>
-    <td><p id="avusturyagp"></p></td>
-  </tr>
-  <tr>
-    <td>BRITANYA GP</td>
-    <td>9 TEMMUZ</td>
-    <td><p id="britaingp"></p></td>
-  </tr>
-  <tr>
-    <td>MACARISTAN GP</td>
-    <td>23 TEMMUZ</td>
-    <td><p id="hungarygp"></p></td>
-  </tr>
-    <tr>
-    <td>BELÇIKA GP</td>
-    <td>30 TEMMUZ</td>
-    <td><p id="belgiumgp"></p></td>
-  </tr>
-    <tr>
-    <td>HOLLANDA GP</td>
-    <td>27 AĞUSTOS</td>
-    <td><p id="netherlands"></p></td>
-  </tr>
-    <tr>
-    <td>ITALYA GP</td>
-    <td>3 EYLÜL</td>
-    <td><p id="italygp"></p></td>
-  </tr>
-    <tr>
-    <td>SINGAPUR GP</td>
-    <td>17 EYLÜL</td>
-    <td><p id="singaporegp"></p></td>
-  </tr>
-    <tr>
-    <td>JAPONYA GP</td>
-    <td>24 EYLÜL</td>
-    <td><p id="japangp"></p></td>
-  </tr>
-    <tr>
-    <td>KATAR GP</td>
-    <td>8 EKİM</td>
-    <td><p id="qatargp"></p></td>
-  </tr>
-   </tr>
-    <tr>
-    <td>AMERIKA GP</td>
-    <td>22 EKİM</td>
-    <td><p id="americagp"></p></td>
-  </tr>
-   </tr>
-    <tr>
-    <td>MEXICO CITY GP</td>
-    <td>29 EKİM</td>
-    <td><p id="mexicocitygp"></p></td>
-  </tr>
-   </tr>
-    <tr>
-    <td>BREZILYA GP</td>
-    <td>5 KASIM</td>
-    <td><p id="brazilgp"></p></td>
-  </tr>
-   </tr>
-    <tr>
-    <td>LAS VEGAS GP</td>
-    <td>19 KASIM</td>
-    <td><p id="lasvegasgp"></p></td>
-  </tr>
-   </tr>
-    <tr>
-    <td>ABU DABI GP</td>
-    <td>26 KASIM</td>
-    <td><p id="abudabigp"></p></td>
-  </tr>
+document.addEventListener('readystatechange', event => {
+    if (event.target.readyState === "complete") {
+        var clockdiv = document.getElementsByClassName("clockdiv");
+      var countDownDate = new Array();
+        for (var i = 0; i < clockdiv.length; i++) {
+            countDownDate[i] = new Array();
+            countDownDate[i]['el'] = clockdiv[i];
+            countDownDate[i]['time'] = new Date(clockdiv[i].getAttribute('data-date')).getTime();
+            countDownDate[i]['days'] = 0;
+            countDownDate[i]['hours'] = 0;
+            countDownDate[i]['seconds'] = 0;
+            countDownDate[i]['minutes'] = 0;
+        }
+      
+      var countdownfunction = setInterval(function() {
+for (var i = 0; i < countDownDate.length; i++) {
+                var now = new Date().getTime();
+                var distance = countDownDate[i]['time'] - now;
+                 countDownDate[i]['days'] = Math.floor(distance / (1000 * 60 * 60 * 24));
+                 countDownDate[i]['hours'] = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                 countDownDate[i]['minutes'] = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                 countDownDate[i]['seconds'] = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                 if (distance < 0) {
+                    countDownDate[i]['el'].querySelector('.days').innerHTML = 0;
+                countDownDate[i]['el'].querySelector('.hours').innerHTML = 0;
+                countDownDate[i]['el'].querySelector('.minutes').innerHTML = 0;
+                countDownDate[i]['el'].querySelector('.seconds').innerHTML = 0;
+                 }else{
+countDownDate[i]['el'].querySelector('.days').innerHTML = countDownDate[i]['days'];
+                countDownDate[i]['el'].querySelector('.hours').innerHTML = countDownDate[i]['hours'];
+                countDownDate[i]['el'].querySelector('.minutes').innerHTML = countDownDate[i]['minutes'];
+                countDownDate[i]['el'].querySelector('.seconds').innerHTML = countDownDate[i]['seconds'];
+}
   
+     }
+            }, 1000);
+    }
+});
 
-  
-</table>
+
+
+
+</script>
+
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="../index.html">Ana Sayfa</a>
+  <a href="../page1/index.html">Okulların Açılmasına Kalan Süre</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; </button>
+</div>
+<script>
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
 
 </body>
 </html>
